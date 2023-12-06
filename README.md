@@ -1,4 +1,5 @@
 composer require maatwebsite/excel
+php artisan db:seed
 php artisan db:seed --class=SalaSeeder
 php artisan db:seed --class=DadoSeeder
 
