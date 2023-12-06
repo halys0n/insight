@@ -14,7 +14,7 @@ class StudentImport implements ToModel, WithHeadingRow, WithStartRow
     public function model(array $row)
     {
         return new Student([
-            'numero'=>$row[0],
+            'numero'=>$row['alunos_disciplinas'],
             'nome'=>$row['nome'],
             'geografia'=>$row['geografia'],
             'historia'=>$row['historia'],
@@ -25,7 +25,6 @@ class StudentImport implements ToModel, WithHeadingRow, WithStartRow
             'profissao_e_formacao'=>$row['profissao_e_formacao'],
             'quimica'=>$row['quimica'],
             'sociologia'=>$row['sociologia'],
-            
         ]);
     }
     public function startRow(): int
